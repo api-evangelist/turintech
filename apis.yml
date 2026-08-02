@@ -1,7 +1,30 @@
 aid: turintech
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/turintech.png
 name: Turintech
-description: Turintech is a company surfaced as a portfolio company of speedinvest and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  TurinTech AI builds Artemis, a code and AI optimization platform that searches
+  configuration spaces across models, runtime, hardware, and source code to make
+  production AI systems and software faster, cheaper, and more reliable without
+  changing the existing stack. Artemis spans AI inference, agentic software,
+  latency-critical infrastructure, and planning & scheduling, and is driven
+  through the Artemis CLI, which imports Git repositories, generates and validates
+  AI-optimized code versions (via LLM, agent, or genetic-algorithm methods), runs
+  compile/test/benchmark validation, and opens optimization pull requests. TurinTech
+  also offers evoML for automated machine-learning model building. Access is via the
+  Artemis CLI and platform using an API key (ARTEMIS_API_KEY). The company is backed
+  by Speedinvest.
 url: https://raw.githubusercontent.com/api-evangelist/turintech/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +34,48 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Artificial Intelligence
+- Machine Learning
+- Code Optimization
+- Developer Tools
+- DevOps
+- Large Language Models
+- Agentic AI
+- CLI
 apis: []
+common:
+- type: Website
+  url: https://www.turintech.ai
+- type: DeveloperPortal
+  url: https://www.turintech.ai/developer
+- type: Documentation
+  url: https://docs.artemis.turintech.ai
+- type: Blog
+  url: https://www.turintech.ai/blog
+- type: SignUp
+  url: https://www.turintech.ai/book-a-demo
+- type: GitHubOrganization
+  url: https://github.com/turintech
+- type: CLI
+  url: cli/turintech-cli.yml
+- type: Authentication
+  url: authentication/turintech-authentication.yml
+- type: Conventions
+  url: conventions/turintech-conventions.yml
+- type: LLMsTxt
+  url: llms/turintech-llms.txt
+- type: DomainSecurity
+  url: security/turintech-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

@@ -1,0 +1,28 @@
+# TurinTech AI
+
+> TurinTech AI builds Artemis, a code and AI optimization platform that searches configuration spaces across models, runtime, hardware, and source code to make production AI systems and software faster, cheaper, and more reliable without changing the existing stack. Artemis is driven through the Artemis CLI; TurinTech also offers evoML for automated machine-learning model building. Access uses an API key (ARTEMIS_API_KEY). Backed by Speedinvest.
+
+## Products
+- [Artemis](https://www.turintech.ai/): Optimization platform for production AI and software (AI inference, agentic software, latency-critical infrastructure, planning & scheduling).
+- [evoML](https://www.turintech.ai/): Automated machine-learning model building — "from the data you have to the models you need."
+
+## Docs
+- [Developer Resources](https://www.turintech.ai/developer): Developer hub.
+- [Artemis Documentation](https://docs.artemis.turintech.ai): Platform docs — quick start, import codebase, project settings, custom runner, discover, CLI, release notes, FAQs.
+- [Artemis CLI](https://docs.artemis.turintech.ai/features/artemis-cli): Command-line access — project, key, target, validation, optimisation, task, plan, chat, scan, model, tui, config, status.
+- [Deployment options](https://docs.artemis.turintech.ai/deployment/deployment-options): Cloud and on-premise.
+- [LLM usage](https://docs.artemis.turintech.ai/architecture/llm-usage): Model configuration.
+
+## Company
+- [Blog](https://www.turintech.ai/blog)
+- [Case studies](https://www.turintech.ai/case-studies)
+- [Use cases](https://www.turintech.ai/use-cases)
+- [Research papers](https://www.turintech.ai/research-papers)
+- [Book a demo](https://www.turintech.ai/book-a-demo)
+- [GitHub organization](https://github.com/turintech)
+
+## Artifacts (API Evangelist)
+- [CLI surface](cli/turintech-cli.yml)
+- [Authentication profile](authentication/turintech-authentication.yml)
+- [Conventions](conventions/turintech-conventions.yml)
+- [Domain security](security/turintech-domain-security.yml)

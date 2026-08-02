@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.artemis.turintech.ai/features/artemis-cli
+docs: https://docs.artemis.turintech.ai
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - config
+  - env
+  oauth2_flows: []
+  note: >-
+    The Artemis platform is accessed through the Artemis CLI/platform using a
+    single API key (ARTEMIS_API_KEY), configured via `artemis config set
+    ARTEMIS_API_KEY <key>` or the ARTEMIS_API_KEY environment variable. Separate
+    Git provider tokens (GitHub/GitLab/Bitbucket/Azure DevOps personal access
+    tokens) are registered with `artemis key add` for repository access. No
+    public OpenAPI or OAuth flow is documented; auth is derived from published
+    CLI documentation, not a machine-readable spec.
+schemes:
+- name: ARTEMIS_API_KEY
+  type: apiKey
+  in: config-or-env
+  parameter: ARTEMIS_API_KEY
+  scope: Artemis platform access
+  sources:
+  - https://docs.artemis.turintech.ai/features/artemis-cli
+- name: git-provider-token
+  type: apiKey
+  in: managed-credential
+  parameter: token
+  scope: Git repository access (per provider PAT)
+  providers:
+  - github
+  - gitlab
+  - bitbucket
+  - azure-devops
+  sources:
+  - https://docs.artemis.turintech.ai/features/artemis-cli

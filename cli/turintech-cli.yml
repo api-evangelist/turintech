@@ -1,0 +1,102 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.artemis.turintech.ai/features/artemis-cli
+name: Artemis CLI
+binary: artemis
+summary: >-
+  Terminal-based access to the TurinTech Artemis code and AI optimization
+  platform. Imports Git repositories, generates and validates AI-optimized
+  code versions, benchmarks combinations to find optimal solutions, and opens
+  optimization pull requests.
+install:
+  methods:
+  - type: installer-script
+    note: >-
+      Automated installer script published in the Artemis quickstart; supports
+      environment selection and on-premise base URLs. The installer download is
+      protected by a published basic-auth credential documented in the
+      quickstart (redacted here).
+    env_flag_examples:
+    - "--env prod"
+    - "--env stg"
+    - "--env dev"
+    - "--base-url <on-prem-url>"
+    installer_url: https://files.artemis.turintech.ai/artemis-cli/prod/artemis-cli-installer.sh
+  - type: binary-download
+    platforms:
+    - linux
+    - macos-intel
+    - macos-arm
+    - windows
+command_groups:
+- name: project
+  purpose: Import and manage Git repositories
+- name: key
+  purpose: Manage Git authentication tokens (GitHub, GitLab, Bitbucket, Azure DevOps)
+- name: target
+  purpose: Select code constructs for optimization
+- name: target version
+  purpose: Generate, validate, score, and deploy AI-optimized code
+- name: validation
+  purpose: Execute compile, test, and benchmark checks
+- name: optimisation
+  purpose: Benchmark version combinations to find optimal solutions
+- name: task
+  purpose: Create single coding work items for AI agents
+- name: plan
+  purpose: Break complex features into structured task sequences
+- name: chat
+  purpose: Interactive AI conversations about codebases
+- name: scan
+  purpose: Security audits and code quality analysis
+- name: model
+  purpose: View available LLM models
+- name: tui
+  purpose: Launch interactive terminal dashboard
+- name: config
+  purpose: Manage CLI configuration
+- name: status
+  purpose: Display connectivity and configuration
+version_generation_methods:
+- method: llm
+  description: Direct language model calls, ~30 seconds, lowest cost
+- method: agent
+  description: AI reasoning with context awareness, 1-5 minutes, medium cost
+- method: ga
+  description: Genetic algorithm with benchmark validation, 10-60 minutes, highest cost; requires a runner
+global_flags:
+- "--debug"
+- "--config <path>"
+- "--output-format"
+- "-h/--help"
+config:
+  env_precedence: env vars > .env file > defaults
+  required:
+  - ARTEMIS_API_KEY
+  endpoints_autoset_by_installer:
+  - USER_MGMT_URL
+  - AGENT_MGMT_URL
+  - FALCON_URL
+  - QUEST_URL
+  - VISION_URL
+  optional:
+  - ARTEMIS_DEBUG
+  - ARTEMIS_OUTPUT_FORMAT   # text | json | yaml
+  - ARTEMIS_TIMEOUT
+git_providers:
+- github
+- gitlab
+- bitbucket
+- azure-devops
+example_flows:
+  setup: |
+    artemis status
+    artemis config set ARTEMIS_API_KEY <your-api-key>
+    artemis key add --name "github-work" --provider github --token <PAT>
+  optimize: |
+    artemis project import --git-url <repo> --key-id <key-id>
+    artemis target add --project <id> --files <paths>
+    artemis target version create --project <id> --target <id> --method llm
+    artemis validation run --project <id> --worker <runner> --types compile,test
+    artemis optimisation create --project <id> --all-enabled --runner <runner>
+    artemis optimisation pr --id <opt-id> --best --title "Performance improvements"

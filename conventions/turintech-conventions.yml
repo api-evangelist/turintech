@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.artemis.turintech.ai/features/artemis-cli
+summary: >-
+  Cross-cutting conventions for the TurinTech Artemis platform as surfaced
+  through the Artemis CLI. There is no documented public REST API surface;
+  conventions here describe the CLI/platform interaction model.
+authentication:
+  style: api-key
+  detail: ARTEMIS_API_KEY via CLI config or environment variable
+  ref: authentication/turintech-authentication.yml
+configuration:
+  precedence: env vars > .env file > defaults
+  output_formats:
+  - text
+  - json
+  - yaml
+  output_format_var: ARTEMIS_OUTPUT_FORMAT
+  timeout_var: ARTEMIS_TIMEOUT
+  debug_var: ARTEMIS_DEBUG
+  retry: configurable retry settings (documented as optional CLI settings)
+idempotency:
+  supported: false
+  note: No idempotency-key contract is documented for the Artemis platform.
+pagination:
+  supported: unknown
+  note: No public REST pagination contract documented.
+versioning:
+  scheme: platform-release (Release Notes)
+  ref: https://docs.artemis.turintech.ai
+error_envelope:
+  note: >-
+    CLI supports structured output (json/yaml) via ARTEMIS_OUTPUT_FORMAT; no
+    published RFC 9457 problem+json contract for a public API.
