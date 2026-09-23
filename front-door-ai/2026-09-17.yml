@@ -1,0 +1,34 @@
+# Front Door AI Index — turintech — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: turintech
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.turintech.ai
+  final_host: www.turintech.ai
+  ownership: own
+  owner: turintech
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 21
+  host_score: 21
+  density: 30.57
+  words: 687
+  tiers:
+    agentic: 4
+    core: 14
+    model: 3
+  ambiguous: 8
+  top_terms:
+    AI: 10
+    agent: 8
+    inference: 3
+    generative ai: 2
+    AI agent: 1
+    Claude: 1
+    LLMs: 1
+    Llama: 1
+    ML: 1
+    OpenAI: 1
