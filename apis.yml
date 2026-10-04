@@ -50,12 +50,12 @@ modified: '2026-07-21'
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Code Optimization
 - Developer Tools
 - DevOps
 - LLM
-- Agentic AI
+- AI Agents
 - CLI
 tags_raw:
 - Company
@@ -67,6 +67,7 @@ tags_raw:
 - Large Language Models
 - Agentic AI
 - CLI
+- Machine-Learning
 apis: []
 common:
 - type: Website
